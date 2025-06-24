@@ -1,12 +1,6 @@
-from calculator import Shape
+from rectangle import Rectangle
 
-class Square(Shape):
-    def __init__(self,side):
+class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
         self.side = side
-    
-    def get_area(self):
-        return self.side **2
-    
-    def get_perimeter(self):
-        return self.side *4
-  
