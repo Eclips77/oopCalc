@@ -9,4 +9,4 @@ class Circle(Shape):
         return math.pi * self.radius **2
     
     def get_perimeter(self):
-        return 
+        return 2 * math.pi * self.radius
