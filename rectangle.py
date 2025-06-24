@@ -1,6 +1,5 @@
 from calculator import Shape
 
-
 class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
@@ -11,5 +10,3 @@ class Rectangle(Shape):
 
     def get_perimeter(self):
         return 2 * (self.width + self.height)
-
-    
