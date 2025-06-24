@@ -1,4 +1,4 @@
-from shape_input_handler import ShapeInputHandler
+from input_hendler import ShapeInputHandler
 
 def main():
     while True:
