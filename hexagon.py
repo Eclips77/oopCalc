@@ -10,5 +10,5 @@ class Hexagon(Shape):
         return area
 
 
-    def get_primeter(self):
-        return self.side * 6
+    def get_perimeter(self):
+        return 6 * self.side
