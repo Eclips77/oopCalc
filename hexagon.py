@@ -11,4 +11,4 @@ class Hexagon(Shape):
 
 
     def get_primeter(self):
-        return self.side * 6
+        return 6 * self.side
