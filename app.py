@@ -96,7 +96,7 @@ class ShapeApp:
 
     def get_two_shapes(self):
         if len(self.shapes) < 2:
-            print("Need at least two shapes.")
+            print(Colors.error("Need at least two shapes."))
             return None, None
         self.print_shapes()
         try:
@@ -104,7 +104,7 @@ class ShapeApp:
             i2 = int(input("Index of second: "))
             return self.shapes[i1], self.shapes[i2]
         except:
-            print("Invalid input.")
+            print(Colors.error("Invalid input."))
             return None, None
 
     def compare_shapes(self):
@@ -128,13 +128,13 @@ class ShapeApp:
         if self.shapes:
             print("Shape with largest area:", max(self.shapes))
         else:
-            print("No shapes.")
+            print(Colors.error("No shapes."))
 
     def show_min(self):
         if self.shapes:
             print("Shape with smallest area:", min(self.shapes))
         else:
-            print("No shapes.")
+            print(Colors.error("No shapes."))
     
     def divade_shapes(self):
         s1, s2 = self.get_two_shapes()
@@ -142,6 +142,6 @@ class ShapeApp:
             try:
                 print(f"Area of shape {s1.id} divided by area of shape {s2.id}: {s1.get_area() / s2.get_area():.2f}")
             except ZeroDivisionError:
-                print("Cannot divide by zero area shape.")
+                print(Colors.error("Cannot divide by zero area shape."))
             except TypeError as e:
                 print(f"Error: {e}")
