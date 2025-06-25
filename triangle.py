@@ -3,6 +3,7 @@ import math
 
 class Triangle(Shape):
     def __init__(self, side1, side2, side3):
+        super().__init__()
         self.side1 = side1  
         self.side2 = side2 
         self.side3 = side3  
@@ -28,5 +29,5 @@ class Triangle(Shape):
             return "Scalene triangle"         # all sides different
 
     def __str__(self):
-        # Unified output: type, area, perimeter
-        return f"Triangle – Type: {self.get_type()}, Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
+        return f"Triangle#{self.id}  Type: {self.get_type()}, Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
+
