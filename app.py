@@ -49,7 +49,7 @@ class ShapeApp:
         print("0. Exit")
 
     def choose_shape(self):
-         print("\nChoose a shape:")
+        print("\nChoose a shape:")
         print("1. Square")
         print("2. Rectangle")
         print("3. Circle")
