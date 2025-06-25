@@ -28,6 +28,8 @@ class ShapeApp:
                     self.show_max()
                 case "7":
                     self.show_min()
+                case "8":
+                    self.divade_shapes()
                 case "0":
                     print("Goodbye!")
                     break
@@ -43,6 +45,7 @@ class ShapeApp:
         print("5. Subtract areas of two shapes")
         print("6. Show shape with largest area")
         print("7. Show shape with smallest area")
+        print("8. Divide area of one shape by another")
         print("0. Exit")
 
     def choose_shape(self):
@@ -108,3 +111,13 @@ class ShapeApp:
             print("Shape with smallest area:", min(self.shapes))
         else:
             print("No shapes.")
+    
+    def divade_shapes(self):
+        s1, s2 = self.get_two_shapes()
+        if s1 and s2:
+            try:
+                print(f"Area of shape {s1.id} divided by area of shape {s2.id}: {s1.get_area() / s2.get_area():.2f}")
+            except ZeroDivisionError:
+                print("Cannot divide by zero area shape.")
+            except TypeError as e:
+                print(f"Error: {e}")
