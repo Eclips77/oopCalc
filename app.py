@@ -1,5 +1,9 @@
 # app.py
 from input_hendler import ShapeInputHandler
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 class ShapeApp:
     def __init__(self):
@@ -16,27 +20,38 @@ class ShapeApp:
                     if shape:
                         self.shapes.append(shape)
                         print("Shape added!")
+                        input("Press Enter to continue...")
                 case "2":
                     self.print_shapes()
+                    input("Press Enter to continue...")
                 case "3":
                     self.compare_shapes()
+                    input("Press Enter to continue...")
                 case "4":
                     self.add_shapes()
+                    input("Press Enter to continue...")
                 case "5":
                     self.subtract_shapes()
+                    input("Press Enter to continue...")
                 case "6":
                     self.show_max()
+                    input("Press Enter to continue...")
                 case "7":
                     self.show_min()
+                    input("Press Enter to continue...")
                 case "8":
                     self.divade_shapes()
+                    input("Press Enter to continue...")
                 case "0":
+                    clear_screen()
                     print("Goodbye!")
                     break
                 case _:
                     print("Invalid choice.")
+                    input("Press Enter to continue...")
 
     def print_main_menu(self):
+        clear_screen()
         print("\nMain Menu:")
         print("1. Create new shape")
         print("2. Show all shapes")
@@ -49,6 +64,7 @@ class ShapeApp:
         print("0. Exit")
 
     def choose_shape(self):
+        clear_screen()
         print("\nChoose a shape:")
         print("1. Square")
         print("2. Rectangle")
