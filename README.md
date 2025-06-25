@@ -89,4 +89,4 @@ Main Menu:
 
 ---
 
-Built with ❤️ by Yaakov
+Built by Yaakov
