@@ -2,6 +2,12 @@ from abc import ABC, abstractmethod
 
 class Shape(ABC):
 
+    _id_counter = 1
+
+    def __init__(self):
+        self.id = Shape._id_counter
+        Shape._id_counter +=1
+
     # Abstract method to calculate area (must be implemented by subclasses)
     @abstractmethod
     def get_area(self):
@@ -58,11 +64,11 @@ class Shape(ABC):
 
     # Returns a user-friendly string representation of the shape
     def __str__(self):
-        return f"{self.__class__.__name__} – Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
+        return f"{self.__class__.__name__} #{self.id}:  Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
 
     # Returns a developer-friendly representation of the shape
     def __repr__(self):
-        return f"{self.__class__.__name__}(area={self.get_area():.2f}, perimeter={self.get_perimeter():.2f})"
+        return f"{self.__class__.__name__} #{self.id}: (area={self.get_area():.2f}, perimeter={self.get_perimeter():.2f})"
 
     # Returns the absolute value of the shape’s area (used with abs())
     def __abs__(self):
