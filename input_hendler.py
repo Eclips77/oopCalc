@@ -1,4 +1,4 @@
-from shape_validator import ShapeValidator
+from validator import ShapeValidator
 from square import Square
 from rectangle import Rectangle
 from circle import Circle
