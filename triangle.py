@@ -31,3 +31,10 @@ class Triangle(Shape):
     def __str__(self):
         return f"Triangle#{self.id}  Type: {self.get_type()}, Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
 
+
+    def __add__(self, other):
+        if isinstance(other, Triangle):
+            total_area = self.get_area() + other.get_area()
+            side = math.sqrt((4 * total_area) / math.sqrt(3))
+            return Triangle(side, side, side)
+        return super().__add__(other)

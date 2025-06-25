@@ -2,6 +2,7 @@
 from input_hendler import ShapeInputHandler
 import os
 from colors import Colors
+from calculator import Shape
 
 
 def clear_screen():
@@ -117,7 +118,11 @@ class ShapeApp:
     def add_shapes(self):
         s1, s2 = self.get_two_shapes()
         if s1 and s2:
-            print(f"Combined area: {s1 + s2:.2f}")
+            result = s1 + s2
+            if isinstance(result, Shape):
+                print(f"Combined area: {result.get_area():.2f}")
+            else:
+                print(f"Combined area: {result:.2f}")
 
     def subtract_shapes(self):
         s1, s2 = self.get_two_shapes()

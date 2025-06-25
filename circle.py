@@ -11,3 +11,10 @@ class Circle(Shape):
     
     def get_perimeter(self):
         return 2 * math.pi * self.radius
+
+    def __add__(self, other):
+        if isinstance(other, Circle):
+            total_area = self.get_area() + other.get_area()
+            new_radius = math.sqrt(total_area / math.pi)
+            return Circle(new_radius)
+        return super().__add__(other)
