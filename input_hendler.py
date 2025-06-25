@@ -4,6 +4,7 @@ from rectangle import Rectangle
 from circle import Circle
 from triangle import Triangle
 from hexagon import Hexagon
+from colors import Colors
 
 class ShapeInputHandler:
     @staticmethod
@@ -13,7 +14,7 @@ class ShapeInputHandler:
         if ShapeValidator.is_valid_square(width, height):
             return Square(width)
         else:
-            print("Invalid square. Sides must be equal and positive.")
+            print(Colors.error("Invalid square. Sides must be equal and positive."))
             return None
 
     @staticmethod
@@ -23,7 +24,7 @@ class ShapeInputHandler:
         if ShapeValidator.is_valid_rectangle(width, height):
             return Rectangle(width, height)
         else:
-            print("Invalid rectangle. Dimensions must be positive.")
+            print(Colors.error("Invalid rectangle. Dimensions must be positive."))
             return None
 
     @staticmethod
@@ -32,7 +33,7 @@ class ShapeInputHandler:
         if ShapeValidator.is_valid_circle(radius):
             return Circle(radius)
         else:
-            print("Invalid circle. Radius must be positive.")
+            print(Colors.error("Invalid circle. Radius must be positive."))
             return None
 
     @staticmethod
@@ -43,7 +44,7 @@ class ShapeInputHandler:
         if ShapeValidator.is_valid_triangle(side1, side2, side3):
             return Triangle(side1, side2, side3)
         else:
-            print("Invalid triangle. Does not follow triangle inequality.")
+            print(Colors.error("Invalid triangle. Does not follow triangle inequality."))
             return None
 
     @staticmethod
@@ -52,5 +53,5 @@ class ShapeInputHandler:
         if ShapeValidator.is_valid_hexagon(side):
             return Hexagon(side)
         else:
-            print("Invalid hexagon. Side must be positive.")
+            print(Colors.error("Invalid hexagon. Side must be positive."))
             return None
