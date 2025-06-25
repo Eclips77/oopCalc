@@ -81,6 +81,7 @@ class ShapeApp:
                             """))
 
 
+
         match input("Enter your option: ").strip():
             case "1": return ShapeInputHandler.handle_square()
             case "2": return ShapeInputHandler.handle_rectangle()
