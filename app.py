@@ -121,6 +121,7 @@ class ShapeApp:
         if s1 and s2:
             result = s1 + s2
             if isinstance(result, Shape):
+                self.shapes.append(result)
                 print(f"Combined area: {result.get_area():.2f}")
             else:
                 print(f"Combined area: {result:.2f}")
