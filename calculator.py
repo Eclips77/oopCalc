@@ -8,12 +8,12 @@ class Shape(ABC):
         self.id = Shape._id_counter
         Shape._id_counter +=1
 
-    # Abstract method to calculate area (must be implemented by subclasses)
+    # Abstract method to calculate area 
     @abstractmethod
     def get_area(self):
         pass
 
-    # Abstract method to calculate perimeter (must be implemented by subclasses)
+    # Abstract method to calculate perimeter 
     @abstractmethod
     def get_perimeter(self):
         pass
@@ -70,7 +70,7 @@ class Shape(ABC):
     def __repr__(self):
         return f"{self.__class__.__name__} #{self.id}: (area={self.get_area():.2f}, perimeter={self.get_perimeter():.2f})"
 
-    # Returns the absolute value of the shape’s area (used with abs())
+    # Returns the absolute value of the shape’s area 
     def __abs__(self):
         return abs(self.get_area())
 
