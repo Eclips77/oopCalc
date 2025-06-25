@@ -29,5 +29,5 @@ class Triangle(Shape):
             return "Scalene triangle"         # all sides different
 
     def __str__(self):
-        # Unified output: type, area, perimeter
-        return f"Triangle – Type: {self.get_type()}, Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
+        return f"Triangle#{self.id}  Type: {self.get_type()}, Area: {self.get_area():.2f}, Perimeter: {self.get_perimeter():.2f}"
+
