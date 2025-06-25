@@ -35,23 +35,28 @@ class ShapeApp:
                     print("Invalid choice.")
 
     def print_main_menu(self):
-        print("\nMain Menu:")
-        print("1. Create new shape")
-        print("2. Show all shapes")
-        print("3. Compare two shapes")
-        print("4. Add areas of two shapes")
-        print("5. Subtract areas of two shapes")
-        print("6. Show shape with largest area")
-        print("7. Show shape with smallest area")
-        print("0. Exit")
+        print("""
+                Main Menu:
+                1. Create new shape
+                2. Show all shapes
+                3. Compare two shapes
+                4. Add areas of two shapes
+                5. Subtract areas of two shapes
+                6. Show shape with largest area
+                7. Show shape with smallest area
+                0. Exit
+                """)
+
 
     def choose_shape(self):
-        print("\nChoose a shape:")
-        print("1. Square")
-        print("2. Rectangle")
-        print("3. Circle")
-        print("4. Triangle")
-        print("5. Hexagon")
+        print("""
+                Choose a shape:
+                1. Square
+                2. Rectangle
+                3. Circle
+                4. Triangle
+                5. Hexagon
+                """)
 
         match input("Enter your option: ").strip():
             case "1": return ShapeInputHandler.handle_square()
